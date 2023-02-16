@@ -1,10 +1,16 @@
+import {Route, Switch} from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import LoginPage from "./pages/LoginPage";
+import RegisterPage from "./pages/RegisterPage";
 
 
 function App() {
   return (
-    <div>
-          <h1>Hello World</h1>
-    </div>
+    <Switch>
+        <Route exact path='/' component={HomePage}/>
+        <Route exact path='/login' component={LoginPage}/>
+        <Route exact path='/register' component={RegisterPage}/>
+    </Switch>
   );
 }
 
