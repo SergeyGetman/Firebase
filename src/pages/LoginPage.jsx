@@ -6,10 +6,10 @@ const LoginPage = () => {
     return (
         <div>
             <h1>Login</h1>
-            <p>
+            <div>
                 <Login />
               or  <Link to="/register">Register</Link>
-            </p>
+            </div>
 
         </div>
     );
