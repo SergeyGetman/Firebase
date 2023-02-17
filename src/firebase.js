@@ -33,14 +33,14 @@ export function writeUserDataUpdate(avtorized, email) {
         email: email,
     })
         .then((res) => {
-            console.log("this is update", res)
+            console.log("this is anotherUsers", res)
         })
         .catch(() => alert("this is impossible"))
 }
 
 export function writeUserDataDelAll() {
     const db = getDatabase();
-    const newData = ref(db, 'update')
+    const newData = ref(db, 'anotherUsers')
     remove(newData)
         .then(res => {
             console.log("this is res", res)

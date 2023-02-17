@@ -1,24 +1,58 @@
 .loginForm {
-  background-color: #515555;
-  min-height: 250px;
+  position: relative;
+  padding: 50px 50px;
+  min-width: 400px;
+  background: #fff;
   border-radius: 10px;
+
+  h2 {
+    display: inline-flex;
+    font-size: 2em;
+    border-left: 5px solid dodgerblue;
+    padding: 10px;
+    color: #1a1818;
+    letter-spacing: 5px;
+    margin-bottom: 60px;
+    font-weight: bold;
+  }
+
 }
 
-.congratsForm{
+.congratsForm {
   position: relative;
-  background-color: #b7c4c6;
   border-radius: 5px;
-  height: 500px;
 
-  
-  h1{
-    position: absolute;
-    margin-top: 3%;
-    font-size: 6rem;
-    text-decoration: underline;
-    height: 10vh;
-    width: 100%;
-    border: none;
-    background-color: transparent;
+
+  h1 {
+    font-size: 2em;
+    border-left: 5px solid dodgerblue;
+    padding: 10px;
+    color: #000;
+    letter-spacing: 5px;
+    margin-bottom: 60px;
+    font-weight: bold;
   }
+}
+
+.congratsformButton{
+  position: relative;
+  left: 15rem;
+}
+
+.inputbox {
+  position: relative;
+  width: 300px;
+  height: 50px;
+  margin-bottom: 50px;
+
+  input {
+    margin: 10px;
+    border: 2px solid #000;
+    outline: none;
+    background: none;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 1.2em;
+  }
+
 }

@@ -27,10 +27,14 @@ const Login = () => {
     }
 
     return (
-        <Form
-            title="sign in"
-            handleClick={handleLogin}
-        />
+        <>
+            <Form
+                title="sign in"
+                handleClick={handleLogin}
+            />
+        </>
+
+
     )
 };
 
