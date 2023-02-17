@@ -3,3 +3,22 @@
   min-height: 250px;
   border-radius: 10px;
 }
+
+.congratsForm{
+  position: relative;
+  background-color: #b7c4c6;
+  border-radius: 5px;
+  height: 500px;
+
+  
+  h1{
+    position: absolute;
+    margin-top: 3%;
+    font-size: 6rem;
+    text-decoration: underline;
+    height: 10vh;
+    width: 100%;
+    border: none;
+    background-color: transparent;
+  }
+}

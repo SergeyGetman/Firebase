@@ -12,7 +12,11 @@ const HomePage = () => {
 
     return isAuth ? (
             <div>
-                <h1>Welcome User</h1>
+                <div className={styles.congratsForm}>
+                    <h1>Registration Successfully</h1>
+
+                </div>
+
 
                 <button onClick={() => dispatch(removeUser())}>You can LOG OUT: {email}</button>
             </div>
