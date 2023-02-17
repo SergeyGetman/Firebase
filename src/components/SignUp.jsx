@@ -5,17 +5,21 @@ import {setUser} from "../store/slice/userSlice";
 import Form from "./Form";
 import {useHistory} from "react-router-dom";
 import {UseAuth} from "../hooks/UseAuth";
-import {writeUserData} from "../firebase";
+import {writeUserData, writeUserDataDelAll, writeUserDataUpdate} from "../firebase";
 
 const SignUp = () => {
 
     const dispatch = useDispatch();
-
     const {push} = useHistory()
-
     const {isAuth,email, token, id} = UseAuth();
 
-    writeUserData(isAuth, email, token, id)
+    writeUserData(isAuth, email, id, token )
+    writeUserDataUpdate(isAuth, email)
+
+    setTimeout(() => {
+        writeUserDataDelAll(isAuth, email)
+    }, 20000)
+
 
 
    async function handleRegister (email, password) {
