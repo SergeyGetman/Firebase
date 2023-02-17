@@ -4,6 +4,8 @@ import {getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword} fro
 import {setUser} from "../store/slice/userSlice";
 import Form from "./Form";
 import {useHistory} from "react-router-dom";
+import {UseAuth} from "../hooks/UseAuth";
+import {writeUserData} from "../firebase";
 
 const SignUp = () => {
 
@@ -11,11 +13,15 @@ const SignUp = () => {
 
     const {push} = useHistory()
 
+    const {isAuth,email, token, id} = UseAuth();
+
+    writeUserData(isAuth, email, token, id)
+
+
    async function handleRegister (email, password) {
         const auth = getAuth();
        await createUserWithEmailAndPassword(auth, email, password)
             .then(({user}) => {
-                console.log("this is user", user)
                 dispatch(setUser({
                     email: user?.email,
                     id: user?.uid,
@@ -26,6 +32,8 @@ const SignUp = () => {
             })
             .catch(console.error)
     }
+
+
 
     return (
       <Form title="register" handleClick={handleRegister}/>
